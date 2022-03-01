@@ -1,5 +1,20 @@
 
 /* ------------------- */
+/* -Custom properties- */
+/* ------------------- */
+
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-semi: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+}
+
+
+
+
+
+
+/* ------------------- */
 /* ------ Reset ------ */
 /* ------------------- */
 
@@ -21,7 +36,7 @@ body, h1, h2, h3, h4, h5, h6, p, figure, picture {
 /* Body setting */
 body {
     min-height: 100vh;
-    line-height: 1.5;
+    line-height: 1.5; /* This affects <br> breaks between lines but in the same paragraph */
 }
 
 
@@ -51,3 +66,56 @@ input, button, textarea, select {
       scroll-behavior: auto !important;
     }
   }
+
+
+
+
+
+  
+/* ------------------- */
+/* - Utility classes - */
+/* ------------------- */
+
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display:grid;
+    gap: var(--gap, 1rem);
+}
+
+
+.container {
+    padding-inline: 2em;      /*   Adds a left and right padding to not have conainers touching the edge */
+    margin-inline: auto;      /*  To automatically size the margin if space is needed by another margin */
+    max-width: 60rem;         /* For consistency across pages */
+}
+
+
+/* This one hides inputs for people who use screen readers (because some inputs might not have labels with them). Accessibility feature. */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+
+/* Color utility classes */
+
+.bg-dark {background-color: hsl( var(--clr-dark) );}
+.bg-semi {background-color: hsl( var(--clr-semi) );}
+.bg-white {background-color: hsl( var(--clr-white) );}
+
+
+.text-dark {color: hsl( var(--clr-dark) );}
+.text-semi {color: hsl( var(--clr-semi) );}
+.text-white {color: hsl( var(--clr-white) );}
