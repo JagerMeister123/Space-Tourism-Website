@@ -13,16 +13,7 @@
 }
 
 /* No margin (To avoid collapsing margins) */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-picture {
+body, h1, h2, h3, h4, h5, h6, p, figure, picture {
     margin: 0;
 }
 
