@@ -175,8 +175,7 @@ input, button, textarea, select {
 
 
 .flow > *:where(:not(:first-child)) {
-    margin-top: 1rem;
-    outline: 1px solid green;
+    margin-top: 1.2em;
 }
 
 
@@ -240,4 +239,36 @@ input, button, textarea, select {
 .large-button:focus::after {
     opacity: 1;
     transform: scale(1.5);
+}
+
+
+.primary-navigation {
+    --gap: 5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    --underline-gap: 2em;
+    
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a span {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+
+.underline-indicators > * {
+    padding: var(--underline-gap, 1rem) 0;
+    border-bottom: .2em solid hsl( var(--clr-white));
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus{
+    /* padding-bottom: 1.5em;
+    border-bottom: .2em solid hsl( var(--clr-white) / .25); */
+    border-color: hsl( var(--clr-white) / .25);
 }
